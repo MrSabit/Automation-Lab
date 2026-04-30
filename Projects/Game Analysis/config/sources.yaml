@@ -1,0 +1,47 @@
+# ======================
+# Game Data Sources Config
+# ======================
+
+steam:
+  enabled: true
+  base_url: "https://store.steampowered.com/search/"
+  params:
+    sort_by: "Released_DESC"
+    max_results_per_page: 25
+  headers:
+    user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+  limits:
+    max_pages: 50
+    request_delay_seconds: 2
+
+itch:
+  enabled: true
+  base_url: "https://itch.io/games"
+  filters:
+    type: "games"
+    sort: "popular"
+  headers:
+    user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+  limits:
+    max_pages: 30
+    request_delay_seconds: 1.5
+
+scraping:
+  retry_attempts: 3
+  timeout_seconds: 10
+  save_raw_data: true
+
+data_storage:
+  raw_path: "data/raw/"
+  processed_path: "data/processed/"
+  export_format: "csv"
+
+analysis:
+  generate_charts: true
+  output_reports: true
+  report_format: "html"
+
+logging:
+  level: "INFO"
+  save_logs: true
+  log_file: "logs/app.log"

@@ -1,0 +1,54 @@
+game-analysis-automation/
+│
+├── README.md
+├── requirements.txt
+├── .env
+├── .gitignore
+│
+├── config/
+│   ├── settings.py          # API keys, URLs, limits, headers
+│   ├── sources.yaml         # Steam, itch.io, etc config
+│
+├── data/
+│   ├── raw/                 # Scraped unprocessed data
+│   ├── processed/           # Cleaned datasets
+│   ├── external/            # Optional downloaded datasets
+│
+├── scrapers/
+│   ├── steam_scraper.py
+│   ├── itch_scraper.py
+│   ├── base_scraper.py      # shared scraping logic (requests, bs4, etc)
+│
+├── pipelines/
+│   ├── run_scraping.py      # orchestrates scraping
+│   ├── clean_data.py        # pandas cleaning logic
+│   ├── feature_engineering.py
+│
+├── analysis/
+│   ├── trends.py            # popularity trends
+│   ├── genre_analysis.py
+│   ├── rating_analysis.py
+│   ├── success_score.py     # custom metric logic
+│
+├── reports/
+│   ├── charts/
+│   │   ├── barplots/
+│   │   ├── histograms/
+│   │   ├── trends/
+│   │
+│   ├── generate_report.py   # creates final report (pdf/html)
+│   ├── report_templates/
+│
+├── utils/
+│   ├── logger.py
+│   ├── helpers.py
+│   ├── downloader.py
+│
+├── notebooks/
+│   ├── exploration.ipynb    # pandas experimentation
+│
+├── tests/
+│   ├── test_scrapers.py
+│   ├── test_cleaning.py
+│
+└── main.py                  # entry point (run whole pipeline)

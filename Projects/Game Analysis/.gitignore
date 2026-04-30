@@ -1,0 +1,74 @@
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# ======================
+# Environment variables
+# ======================
+.env
+
+# ======================
+# IDE / Editors
+# ======================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ======================
+# Jupyter Notebook
+# ======================
+.ipynb_checkpoints/
+
+# ======================
+# OS files
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# Data files (IMPORTANT for your project)
+# ======================
+data/raw/
+data/processed/
+data/external/
+
+# Keep folder structure but ignore contents
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+
+# ======================
+# Logs
+# ======================
+logs/
+*.log
+
+# ======================
+# Selenium / browser drivers
+# ======================
+chromedriver
+geckodriver
+driver/
+
+# ======================
+# Reports (optional)
+# ======================
+reports/charts/
+reports/output/
+
+# ======================
+# Misc
+# ======================
+*.sqlite3
+*.db

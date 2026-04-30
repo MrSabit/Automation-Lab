@@ -1,0 +1,7 @@
+pandas
+matplotlib
+beautifulsoup4
+requests
+numpy
+pathlib
+PyYAML
